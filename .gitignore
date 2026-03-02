@@ -2,7 +2,7 @@
 .cursor
 .env
 *.exe
-node-meta-exporter
+/node-meta-exporter
 tmp/
 vendor/
 .shared/
