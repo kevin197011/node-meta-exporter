@@ -1,0 +1,8 @@
+
+.cursor
+.env
+*.exe
+node-meta-exporter
+tmp/
+vendor/
+.shared/

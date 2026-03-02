@@ -1,0 +1,19 @@
+services:
+  node-meta-exporter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-meta-exporter
+    ports:
+      - "9101:9101"
+    env_file:
+      - .env
+    environment:
+      - ENV=production
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:9101/healthz"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
