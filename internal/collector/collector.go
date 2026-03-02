@@ -35,7 +35,7 @@ func NewHostMetaCollector(client *jumpserver.Client, logger *slog.Logger) *HostM
 		hostMeta: prometheus.NewDesc(
 			"infra_host_meta",
 			"JumpServer host metadata with labels for hostname, address, platform, and tags. Value is always 1.",
-			[]string{"id", "hostname", "instance", "platform", "comment", "org_name", "node", "labels"},
+			[]string{"id", "hostname", "ip", "platform", "comment", "org_name", "node", "labels"},
 			nil,
 		),
 		scrapeOK: prometheus.NewDesc(
